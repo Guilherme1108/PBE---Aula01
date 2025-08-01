@@ -7,7 +7,7 @@
 
 //import d bibliotéca para fazer a entrada de daddos via terminal 
 //(irémos utilizar ela de forma provisória)
-var readline = require('readline')
+var readline = require('readline');
 
 //criando um objeto de entrada de dados para captar ou printar dados via terminal
 var entradaDeDados = readline.createInterface({
@@ -16,18 +16,18 @@ var entradaDeDados = readline.createInterface({
 })
 
 entradaDeDados.question('Digite seu nome:', function(nome){
-    var nomeUsuario = nome
+    var nomeUsuario = nome;
 
     if(nomeUsuario == ''){
         console.log('Não foi possivel processar a solicitação')
     }else{
         //String() -> converte um objeto em String
         //toUppercase() -> converte o conteudo de uma String em MAIUSCULO
-        console.log('O nome digittado foi: ' + String(nomeUsuario).toUpperCase())
-        console.log(nome)
+        console.log('O nome digittado foi: ' + String(nomeUsuario).toUpperCase());
+        console.log(nome);
     }
 
-    entradaDeDados.close() /* fecha a interface de entrada de dados via terminal */
+    entradaDeDados.close(); /* fecha a interface de entrada de dados via terminal */
 })
 
 /*
